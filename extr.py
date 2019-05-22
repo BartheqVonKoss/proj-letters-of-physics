@@ -66,7 +66,7 @@ class FrequencySummarizer:
         """
         return nlargest(n, ranking, key=ranking.get)
     
-    def clean_text(self, text):
+    def clean(self, text):
         text = text.replace('\r', ' ').replace('\n', ' ').replace('\t',' ').replace('\xa0',' ')
         text = text.replace('Physics Today', ' ')
         return text
